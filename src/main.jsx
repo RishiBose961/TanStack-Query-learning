@@ -14,6 +14,7 @@ import Home from "./Home.jsx";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import Productspage from "./paginated.jsx";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<Home />} />
       <Route path="/product" element={<Products />} />
+      <Route path="/paginate" element={<Productspage />} />
       <Route path="/products/:productId" element={<Product />} />
     </Route>
   )
